@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="loginPage" class="modal">
+        <div class="modal-content">
+            <h1>Password Manager Login</h1>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+            <button id="loginButton">Login</button>
+            <button id="setPasswordButton">Set Opening Password</button>
+        </div>
+    </div>
+
+    <div id="mainContent" style="display: none;">
+        <h1>Password Manager</h1>
+        <div class="input-container">
+            <input type="text" id="site" placeholder="Website" required>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="addButton">Add Password</button>
+        </div>
+        <table id="passwordTable">
+            <thead>
+                <tr>
+                    <th>Site</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Password entries will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
